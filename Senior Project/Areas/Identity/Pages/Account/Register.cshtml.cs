@@ -23,12 +23,12 @@ namespace Senior_Project.Areas.Identity.Pages.Account
 {
     public class RegisterModel : PageModel
     {
-        private readonly SignInManager<IdentityUser> _signInManager;
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly IUserStore<IdentityUser> _userStore;
-        private readonly IUserEmailStore<IdentityUser> _emailStore;
-        private readonly ILogger<RegisterModel> _logger;
-        private readonly IEmailSender _emailSender;
+        private readonly SignInManager<IdentityUser> _signInManager; // This is the class that handles the sign in process
+        private readonly UserManager<IdentityUser> _userManager; // This is the class that handles the user management
+        private readonly IUserStore<IdentityUser> _userStore; // This is the class that handles the user store
+        private readonly IUserEmailStore<IdentityUser> _emailStore; // This is the class that handles the email store
+        private readonly ILogger<RegisterModel> _logger; // This is the class that handles the logging
+        private readonly IEmailSender _emailSender; // This is the class that handles the email sending
 
         public RegisterModel(
             UserManager<IdentityUser> userManager,
