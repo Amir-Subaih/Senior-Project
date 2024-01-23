@@ -7,7 +7,12 @@
     <UserSecretsId>aspnet-Senior_Project-1969a2c0-9762-4ea8-bd0a-a6c62f51af99</UserSecretsId>
     <RootNamespace>Senior_Project</RootNamespace>
     <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+    <ApplicationIcon>Gold Black White Modern Minimalist Icon Property Logo.png</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Gold Black White Modern Minimalist Icon Property Logo.png" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter" Version="8.0.1" />
