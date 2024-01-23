@@ -8,6 +8,7 @@
     <RootNamespace>Senior_Project</RootNamespace>
     <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
     <ApplicationIcon>Gold Black White Modern Minimalist Icon Property Logo.png</ApplicationIcon>
+    <Authors>$(Amir)</Authors>
   </PropertyGroup>
 
   <ItemGroup>
