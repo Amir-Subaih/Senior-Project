@@ -30,4 +30,9 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Senior Project.Core\Senior Project.Core.csproj" />
+    <ProjectReference Include="..\Senior Project.Data\Senior Project.Data.csproj" />
+  </ItemGroup>
+
 </Project>

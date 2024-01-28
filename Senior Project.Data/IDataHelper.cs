@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Senior_Project.Data
 {
-    internal interface IDataHelper<Table>
+    public interface IDataHelper<Table>
     {
         List<Table> GetData();
         List<Table> Search(String SearchItem);

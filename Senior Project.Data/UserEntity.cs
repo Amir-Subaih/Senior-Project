@@ -7,25 +7,34 @@ using System.Threading.Tasks;
 
 namespace Senior_Project.Data
 {
-    internal class UserEntity : IDataHelper<User>
+    public class UserEntity : IDataHelper<User>
     {
         List<User> listOfUsers;
-        public UserEntity() { 
-            listOfUsers = new List<User>();
+        private User user;
+        public UserEntity()
+        {
+            listOfUsers = new List<User>
+            {
+                new User(){Id=1,FirstName = "Ahmed",LastName = "Omer" , Email = "fswf@gmail.com" , Password = "123456",Phone =156650511,Bio = ".New Div" },
+                new User(){Id=1,FirstName = "Mahmed",LastName = "Omer" , Email = "kjtjf@gmail.com" , Password = "127856",Phone =785650511,Bio = ".New Div" },
+                new User(){Id=1,FirstName = "Ahmed",LastName = "Ali" , Email = "jbjdjh@gmail.com" , Password = "127896",Phone =156259511,Bio = ".New Div" }
+            };
+            this.user = new User();
         }
         public void Add(User item)
         {
-            throw new NotImplementedException();
+            listOfUsers.Add(item);
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            user = Find(id);
+            listOfUsers.Remove(user);
         }
 
         public User Find(int id)
         {
-            throw new NotImplementedException();
+            return listOfUsers.Where(x => x.Id == id).First();
         }
 
         public List<User> GetData()
@@ -46,7 +55,15 @@ namespace Senior_Project.Data
 
         public void Update(int id, User item)
         {
-            throw new NotImplementedException();
+            user = Find(id);
+            user = new User
+            {
+                FirstName = item.FirstName,
+                LastName = item.LastName,
+                Email = item.Email,
+                Phone = item.Phone,
+                Bio = item.Bio
+            };
         }
 
 

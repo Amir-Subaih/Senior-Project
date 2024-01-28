@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Senior_Project.Core;
 using Senior_Project.Data;
 
 var builder = WebApplication.CreateBuilder(args);// Create a builder for the app
@@ -13,6 +14,7 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();// For database error
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();// For Identity
 builder.Services.AddRazorPages();// For Razor Pages
+builder.Services.AddSingleton<IDataHelper<User>, UserEntity>();// For the UserEntity class
 
 var app = builder.Build();// Build the app
 
