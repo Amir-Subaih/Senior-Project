@@ -15,6 +15,7 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<ApplicationDbContext>();// For Identity
 builder.Services.AddRazorPages();// For Razor Pages
 builder.Services.AddSingleton<IDataHelper<User>, UserEntity>();// For the UserEntity class
+builder.Services.AddMvc(op => op.EnableEndpointRouting = false);// For controllers
 
 var app = builder.Build();// Build the app
 
@@ -38,5 +39,10 @@ app.UseRouting();// For routing requests to controllers
 app.UseAuthorization();// For authorization
 
 app.MapRazorPages();// For Razor Pages
+
+app.UseAuthentication();// For authentication
+
+app.UseMvcWithDefaultRoute();// For controllers
+
 
 app.Run();// For the default page
